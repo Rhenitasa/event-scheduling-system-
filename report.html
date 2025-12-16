@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Resource Utilisation Report</h2>
+
+<table>
+    <tr>
+        <th>Resource</th>
+        <th>Total Hours Used</th>
+        <th>Upcoming Bookings</th>
+    </tr>
+    {% for r in data %}
+    <tr>
+        <td>{{ r[0] }}</td>
+        <td>{{ r[1] }}</td>
+        <td>
+            {% for e in r[2] %}
+                {{ e }}<br>
+            {% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

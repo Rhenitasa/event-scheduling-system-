@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Resources</h2>
+
+<a href="/add-resource"><button>Add Resource</button></a>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Edit</th>
+    </tr>
+    {% for r in resources %}
+    <tr>
+        <td>{{ r.name }}</td>
+        <td>{{ r.type }}</td>
+        <td>
+    <a href="/edit-resource/{{ r.id }}">
+        <button>Edit</button>
+    </a>
+</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

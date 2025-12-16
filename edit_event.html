@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Event</h2>
+
+<form method="POST">
+    <label>Title</label>
+    <input type="text" name="title" value="{{ event.title }}" required>
+
+    <label>Start Time</label>
+    <input type="datetime-local" name="start"
+           value="{{ event.start_time.strftime('%Y-%m-%dT%H:%M') }}" required>
+
+    <label>End Time</label>
+    <input type="datetime-local" name="end"
+           value="{{ event.end_time.strftime('%Y-%m-%dT%H:%M') }}" required>
+
+    <label>Description</label>
+    <input type="text" name="desc" value="{{ event.description }}">
+
+    <button type="submit">Update Event</button>
+</form>
+{% endblock %}
