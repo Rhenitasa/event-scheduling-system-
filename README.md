@@ -9,7 +9,7 @@ This repository contains screenshots and a demo video of the Flask Event Schedul
 ![Events](Events.jpg)
 
 ### 📎 Resource Allocation
-![Allocation](Allocation.jpg)
+![Allocation](Allocate.jpg)
 
 ### ⚠️ Conflict Detection
 ![Conflict](Conflict.jpg)
